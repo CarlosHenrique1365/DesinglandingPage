@@ -1,0 +1,350 @@
+@charset "UTF-8";
+/* Configurações globais */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+:root{
+    --cor01:#9DA65D;
+    --cor02:#2F4F4F;
+    --cor03:#F2F2F2;
+    --cor04:#bfbdba7d;
+    --cor05:#9dd45e12;
+    --cor06:#9dd45e2d;;
+    --gradiente:linear-gradient(75deg,#fff,silver,silver,#fff);
+    --gradiente02:linear-gradient(75deg,#2c4a59d8, #162839c2,#162839e7, #2c4a59bb);
+}
+    
+@keyframes espalhar {
+    0%{background-position: 100% 0%;}
+    25%{background-position: 75% 25%;}
+    50%{background-position: 50% 50%;}
+    75%{background-position: 25% 75%;}
+    100%{background-position: 0% 100%;}
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Lato", sans-serif;;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
+    background-color: var(--cor03);
+    margin-top: 80px;
+    overflow-x: hidden;
+}
+
+hr {
+    border: 0.5px solid rgba(192, 192, 192, 0.385);
+}
+
+a{
+    color: black;
+}
+
+/* Estilos Header */
+.logo{
+    display: grid;
+    margin-left: 30px;
+    justify-content: center;
+    width: 200px;
+    font-size: 0.8rem;
+    color: var(--cor01);
+}
+
+.nav-list{
+    grid-column: 1 / 4;
+    display: grid;
+    height: 50px;
+    background-color: var(--cor03);
+    align-items: center;
+    justify-content: flex-start;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 10px 0px;
+    font-variant: small-caps;
+}
+
+.nav-itens{
+    display: none;
+    gap: 20px;
+    padding: 8px;
+    margin-top: 3px;
+    max-width: 700px;
+}
+
+.nav-itens a{
+    color: var(--cor01);
+    font-size: 1.2rem;
+}
+
+#btnnav{
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    text-align: center;
+    background: var(--gradiente);
+    background-size: 1400% 100%;
+    animation-name: espalhar;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+}
+
+#btnnav a{
+    color: #000000;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+.content{
+    grid-column: 1 / 4;
+    height: 100vh;
+    padding: 20px;
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+}
+/* Estilos Tela Home */
+.primary{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    background-color: #9DA65D;
+    border-radius: 5px;
+    line-height: 1.8rem;
+}
+
+.primary h1{
+    font-size: 2.2rem;
+    padding-bottom: 10px;
+}
+
+.primary p{
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.primary span{
+    font-size: 0.8rem;
+}
+
+#imgfundo{
+    height: 140%;
+    width: 100%;
+    background:#9DA65D url('../img/img02.png') no-repeat;
+    background-size:cover;
+    background-position:center center;
+}
+
+div #btnagende{
+    display: grid;
+    width: 250px;
+    position: relative;
+}
+
+#btnagende button {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    left: 50%;
+
+    background:var(--gradiente);
+    background-size: 1400% 100%;
+
+    border-radius: 5px;
+    border: 2px solid var(--cor03);
+
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+
+    padding: 10px;
+    color: black;
+    cursor: pointer;
+
+    animation-name: espalhar;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+}
+
+/* Estilos Sobre */
+.about{
+    display: grid;
+    height: max-content;
+    background-color: var(--cor04);
+    color: black;
+    box-shadow: 5px 5px 7px 3px var(--cor04);
+    border-radius: 5px;
+
+    justify-content: center;
+    margin-top: 100px;
+    
+}
+.about h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.about h2{
+    color:var(--cor02);
+}
+
+.about h2::before{
+    content: ".";
+    font-size: 80px;
+}
+
+.about h3{
+    color: rgb(118, 112, 112);
+    padding: 15px;
+}
+
+.about p{
+    margin-bottom: 30px;
+}
+
+#formacao p {
+    margin-bottom: 20px;
+}
+#formacao dt{
+    color: var(--cor01);
+    font-weight: bolder;
+}
+/* Estilos Serviços */
+i{
+    position: relative;
+    left: 35%;
+    top: 90%;
+    font-size: 30px;
+    color: var(--cor02);
+}
+
+.services{
+    background-color: var(--cor03);
+    margin:200px auto;
+    height: min-content;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px 5px var(--cor04);
+}
+
+.services h1{
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 20px;
+}
+.services p{
+    text-align: justify;
+}
+.services h2, h3 ,h4{
+    text-align: center;
+    color: var(--cor02);
+}
+
+/* #service1, #service2, #service3{ */
+.item{
+    display: grid;
+    margin: 15px;
+    border: 1px solid var(--cor06);
+    background-color: var(--cor05);
+    height: min-content;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* CSS Formulário */
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor05);
+    color: var(--cor02);
+    height: max-content;
+    border-radius: 5px;
+}
+
+.formulario h2,p{
+    text-align: center;
+    color: #000000db;
+    padding: 10px;
+}
+
+.formulario p{
+    margin-bottom: 40px;
+}
+
+.formulario form input{
+    width: 95%;
+    border: 2px solid var(--cor05);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.formulario #btnenviar{
+    background-color: var(--cor02);
+    color: var(--cor03);
+    margin-top: 30px;
+    
+    background: var(--gradiente02);
+    background-size: 1400% 100%;
+    transition-duration: 0.6s;
+    animation-name: espalhar;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite;
+}
+
+.formulario #imensagem{
+    height: 50px;
+}
+
+footer{
+    display: grid;
+    padding: 50px;
+    grid-column: 1/4;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .logo{
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+#contato{
+    font-size: .8rem;
+    margin-bottom: 20px;
+}
+
+#contato p{
+    color: var(--cor01);
+}
+
+#mapasite{
+    margin: 30px;
+}
+
+#mapasite p a{
+    color:var(--cor01);
+}
+
+#copy{
+    font-size: 0.8rem;
+    background-color: var(--cor05);
+    width: 100vw;
+}
+
+#copy a{
+    color: var(--cor01);
+}
