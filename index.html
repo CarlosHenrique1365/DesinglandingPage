@@ -9,41 +9,84 @@
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Font+Name">
     <link rel="stylesheet" href="styles/stylegeral.css">
+    <link rel="stylesheet" href="stylemobile.css">
     <script src="JavaScript/index.js" defer></script>
 </head>
 <body>
-<nav class="nav-list">
-    <div  class="logo" > <p> <strong><em>Dra. Nicole Campos</em></strong> <br>Ginecologia e Clínica Geral</p></div>
-    <ul class="nav-itens">
+<div class="background">
+    <nav class="nav-list">
+        <div  class="logo" > <p> <strong><em>Dra. Nicole Campos</em></strong> <br>Ginecologia e Clínica Geral</p></div>
+        <ul class="nav-itens">
+            <li><a href="#primary">Home</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li id="btn-cta"><a  href="#">Entre em Contato</a></li>
+        </ul>
         
-        <li><a href="#primary">Home</a></li>
-        <li><a href="#services">Serviços</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li><button id="btnnav"><a href="" >Agendamento</a></button></li>
-    </ul>
-    
-</nav>
-<section class="content primary" id="primary">
-    <article>
-        <h1>Dra. Nicole Campos</h1>
+    </nav>
         
-        <p>Ginecologia e Clínica Geral</p>
-        <hr>
-        <span>Sou médica com mais de 5 anos de experiência em clínica geral e ginecologia, dedicada ao cuidado integral.</span>
-    </article>
-    <article id="imgfundo">
+    <section class="content primary" id="primary">
+        <article>
+            <h1>Dra. Nicole Campos</h1>
         
-    </article>
-    
+            <p>Ginecologia e Clínica Geral <br> <hr>
+                Cuidados médicos personalizados com dedicação e empatia para sua saúde e bem-estar.</p>
+           
+            <div id="btnagende"><button type="submit" ><a href="">AGENDE SUA CONSULTA</a></button></div>
+        </article>
+    </section>
+</div>
 
-    <div id="btnagende"><button type="submit" ><a href="">AGENDE SUA CONSULTA</a></button></div>
+<section class="content services" id="services">
+    <article class="titulo-servicos">
+        <h1>Nossos Serviços:<hr></h1>
+        <p style="text-align: center;">Oferecemos uma ampla gama de serviços médicos para atender suas necessidades.
+        </p>
+    </article>
+
+    <article class="item" id="service1">
+        <h3>Consultas Gerais</h3>
+        <p>Atendimento médico para todas as idades, com foco na prevenção e no diagnóstico de doenças.</p>
+
+    </article>
+
+    <article class="item" id="service2">
+        <h3>Ginecologia</h3>
+        <p> Saúde da mulher, incluindo exames de rotina e tratamentos específicos.</p>
+
+        
+    </article>
+
+    <article class="item" id="service3">
+        <h3>Clínica Geral</h3>
+        <p>Atendimento integral para diagnóstico e tratamento de diversas condições de saúde. </p>
+    </article>
+    <article class="item" id="service4">
+        <h3>Exames Preventivos</h3>
+        <p>Check-ups regulares e exames de rotina para detectar problemas de saúde precocemente.</p>
+    </article>
+
+    <article class="item" id="service5">
+        <h3>Telemedicina</h3>
+        <p>Consultas médicas online para maior conveniência e acesso rápido ao atendimento, sem sair de casa..</p>
+    </article>
+
+    <article class="item" id="service6">
+        <h3>Tratamentos Especiais</h3>
+        <p>Terapias avançadas e personalizadas para condições específicas, com foco na recuperação e bem-estar.</p>
+    </article>
 </section>
 
 <section class="content about" id="about">
-    <h1>Sobre Mim <hr></h1>
-    <h2>Olá! Eu sou a Dra. Nicole Campos</h2>
+    <h1>Por que escolher a Dra. Nicole Campos?<hr></h1>
+    <h2>Sou a Dra. Nicole Campos</h2>
     <h3>Clínica Geral e Saúde Da Mulher</h3>
+
+    Atendimento Humanizado
+Estrutura Moderna
+Experiência e Dedicação
+Planos Flexíveis de Saúde
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde perferendis repudiandae tempore sed fuga. Porro reiciendis praesentium error doloremque nisi expedita alias, animi corporis perferendis laborum? Libero quas reprehenderit consequatur.</p>
 
     <h1>Educação <hr></h1>
@@ -63,38 +106,6 @@
     
 </section>
 
-<section class="content services" id="services">
-    <article>
-        <h1>Atuações e serviços oferecidos <hr></h1>
-        <p style="text-align: center;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias vero magnam nemo.
-        </p>
-    </article>
-
-    <article class="item" id="service1">
-        <i class="fas fa-heart"></i>
-        <h3>Lorem</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo nihil, ducimus ad laboriosam repellat quaerat facere architecto eaque vel delectus quidem temporibus in nam voluptatibus odio libero vitae.</p>
-
-    </article>
-
-    <article class="item" id="service2">
-        <i class="fas fa-user-md"></i>
-        <h3>Ipsum</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima deserunt quidem laboriosam, dolores esse explicabo mollitia dicta tempora magni aliquid veniam doloribus quasi ex fuga voluptates neque officia tempore a.</p>
-    </article>
-
-    <article class="item" id="service3">
-        <i class="fas fa-female"></i>
-        <h3>Ipsum</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima deserunt quidem laboriosam, dolores esse explicabo mollitia dicta tempora magni aliquid veniam doloribus quasi ex fuga voluptates neque officia tempore a.</p>
-    </article>
-
-    <article class="item" id="service4">
-        <i class="fas fa-laptop-medical fa-telemedicina"></i>
-        <h3>Ipsum</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima deserunt quidem laboriosam, dolores esse explicabo mollitia dicta tempora magni aliquid veniam doloribus quasi ex fuga voluptates neque officia tempore a.</p>
-    </article>
-</section>
 <section class="content formulario" id="form">
     <h2>Dúvidas?</h2>
     <p>Preencha o formulário abaixo e nossa equipe de atendimento entrará em contato em breve.</p>

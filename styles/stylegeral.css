@@ -7,11 +7,12 @@
     --cor01:#9DA65D;
     --cor02:#2F4F4F;
     --cor03:#F2F2F2;
-    --cor04:#bfbdba7d;
+    --cor04:#bfbdba41;
     --cor05:#9dd45e12;
     --cor06:#9dd45e2d;;
     --gradiente:linear-gradient(75deg,#fff,silver,silver,#fff);
-    --gradiente02:linear-gradient(75deg,#2c4a59d8, #162839c2,#162839e7, #2c4a59bb);
+    --gradiente02:linear-gradient(75deg,#71b1b8,#4d98a1,#45b2be,#65aeb6,#6cb5bd);/*linear-gradient(75deg,#2c4a59d8, #162839c2,#162839e7, #2c4a59bb); */
+    
 }
     
 @keyframes espalhar {
@@ -33,7 +34,6 @@ body{
     display: grid;
     grid-template-columns: 30px 1fr 30px;
     background-color: var(--cor03);
-    margin-top: 80px;
     overflow-x: hidden;
 }
 
@@ -46,45 +46,57 @@ a{
 }
 
 /* Estilos Header */
+
 .logo{
-    display: grid;
+    width: 100px;
     margin-left: 30px;
-    justify-content: center;
-    width: 200px;
-    font-size: 0.8rem;
-    color: var(--cor01);
+    font-size: 0.6rem;
 }
 
 .nav-list{
     grid-column: 1 / 4;
     display: grid;
-    height: 50px;
-    background-color: var(--cor03);
+    height: 70px;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-around;
 
-    position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
     padding: 10px 0px;
     font-variant: small-caps;
+    z-index: 1;
 }
 
 .nav-itens{
-    display: none;
+    display: grid;
+    grid-column: 2/4;
+    grid-template-columns: repeat(6,1fr);
     gap: 20px;
     padding: 8px;
     margin-top: 3px;
     max-width: 700px;
+    border-bottom: 1px solid var(--cor04);
 }
 
 .nav-itens a{
-    color: var(--cor01);
+    color: var(--cor02);
     font-size: 1.2rem;
 }
 
-#btnnav{
+.nav-itens #btn-cta{
+    width: max-content;
+    position:relative;
+    bottom: 10px;
+    
+}
+
+.nav-itens #btn-cta a{
+    color: white;
+}
+
+
+/* #btnnav{
     width: 120px;
     height: 35px;
     border-radius: 5px;
@@ -101,7 +113,7 @@ a{
     color: #000000;
     font-weight: bolder;
     font-variant: small-caps;
-}
+} */
 
 .content{
     grid-column: 1 / 4;
@@ -112,60 +124,55 @@ a{
     margin: auto;
 }
 /* Estilos Tela Home */
+
+.background{
+    grid-column: 1/4;
+    background:#9DA65D url('../img/img-fundo.png') no-repeat;
+    background-size:cover;
+    background-position: center bottom;
+}
+
 .primary{
     display: grid;
     text-align: center;
-    grid-template-columns: 1fr 1fr;
-    background-color: #9DA65D;
+    justify-content: center;
+    height: 80vh;
     border-radius: 5px;
     line-height: 1.8rem;
 }
 
 .primary h1{
     font-size: 2.2rem;
-    padding-bottom: 10px;
 }
 
 .primary p{
     font-size: 1.3rem;
-    color: #fff;
+    color: var(--cor02);
 }
 
 .primary span{
     font-size: 0.8rem;
+    color: #435fd2;
 }
 
-#imgfundo{
-    height: 140%;
-    width: 100%;
-    background:#9DA65D url('../img/img02.png') no-repeat;
-    background-size:cover;
-    background-position:center center;
+
+#btnagende{
+    margin-top: 140px;
 }
 
-div #btnagende{
-    display: grid;
-    width: 250px;
-    position: relative;
+#btnagende a{
+    color: white;
 }
-
-#btnagende button {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 70%;
-    left: 50%;
-
-    background:var(--gradiente);
+#btn-cta ,#btnagende button {
+    background:var(--gradiente02);
     background-size: 1400% 100%;
-
-    border-radius: 5px;
-    border: 2px solid var(--cor03);
+    border-radius: 15px;
+    border: none;
 
     font-weight: bolder;
     letter-spacing: 0.1rem;
 
     padding: 10px;
-    color: black;
     cursor: pointer;
 
     animation-name: espalhar;
@@ -177,7 +184,8 @@ div #btnagende{
 .about{
     display: grid;
     height: max-content;
-    background-color: var(--cor04);
+    text-align: center;
+    background-size: cover;
     color: black;
     box-shadow: 5px 5px 7px 3px var(--cor04);
     border-radius: 5px;
@@ -187,28 +195,21 @@ div #btnagende{
     
 }
 .about h1{
-    font-size: 2rem;
+    font-variant: small-caps;
+    font-size: 1.5rem;
+    color: var(--cor01);
     margin-bottom: 20px;
     padding-bottom: 10px;
-    text-align: center;
+    text-align: start;
 }
 
-.about h2{
-    color:var(--cor02);
-}
 
-.about h2::before{
-    content: ".";
-    font-size: 80px;
-}
-
-.about h3{
-    color: rgb(118, 112, 112);
-    padding: 15px;
+.about h2, h3{
+    color: var(--cor02);
 }
 
 .about p{
-    margin-bottom: 30px;
+    padding: 40px 0px;
 }
 
 #formacao p {
@@ -229,10 +230,16 @@ i{
 
 .services{
     background-color: var(--cor03);
-    margin:200px auto;
+    margin:100px auto;
     height: min-content;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     border-radius: 10px;
     box-shadow: 5px 5px 4px 5px var(--cor04);
+}
+
+.titulo-servicos{
+    grid-column: 1/3;
 }
 
 .services h1{
